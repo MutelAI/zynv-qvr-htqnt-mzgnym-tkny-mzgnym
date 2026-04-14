@@ -1,0 +1,280 @@
+{
+  "business": {
+    "name": "זינו קור",
+    "name_en": "זינו קור- התקנת מזגנים טכנאי מזגנים",
+    "site_lang": "he",
+    "phone": "+972548972744",
+    "phone_display": "+972548972744",
+    "whatsapp": "+972548972744",
+    "website": "",
+    "rating": 4.8,
+    "reviews_count": 48,
+    "address_he": "Shmu'el Salant St 51, Petah Tikva, Israel",
+    "address_en": "Shmu'el Salant St 51, Petah Tikva, Israel",
+    "category_he": "קבלן מיזוג אוויר",
+    "category_en": "Air conditioning contractor",
+    "maps_url": "https://maps.google.com/?q=32.080114,34.8516674",
+    "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFRLSaUk8sRl9ehxqWwkZ3AqiguqYUGf74upvh4_S36oeCULRWGxV1jN1mSBiN1NRp89FBO7GW9prRV7SXnIgfcLiaYH7_7_7BCD4H7XZwh6ID_3EKPpNX1DTV8g_FkCjQIbKBBew=w408-h306-k-no",
+    "logo_emoji": "❄️",
+    "geo": {
+      "latitude": 32.080114,
+      "longitude": 34.8516674
+    },
+    "schema_type": "LocalBusiness",
+    "price_range": "moderate",
+    "source_url": "https://maps.app.goo.gl/H4hTrMHAv9d85AGq9",
+    "cache_key": "H4hTrMHAv9d85AGq9"
+  },
+  "editToken": "810a456e785c26d5ed2f7639e7c4f5c8",
+  "hours": [
+    {
+      "day_key": "sunday",
+      "day_he": "ראשון",
+      "day_en": "Sunday",
+      "hours_he": "8:00 - 17:00",
+      "hours_en": "8 AM–5 PM",
+      "is_open": true
+    },
+    {
+      "day_key": "monday",
+      "day_he": "שני",
+      "day_en": "Monday",
+      "hours_he": "8:00 - 17:00",
+      "hours_en": "8 AM–5 PM",
+      "is_open": true
+    },
+    {
+      "day_key": "tuesday",
+      "day_he": "שלישי",
+      "day_en": "Tuesday",
+      "hours_he": "8:00 - 17:00",
+      "hours_en": "8 AM–5 PM",
+      "is_open": true
+    },
+    {
+      "day_key": "wednesday",
+      "day_he": "רביעי",
+      "day_en": "Wednesday",
+      "hours_he": "8:00 - 17:00",
+      "hours_en": "8 AM–5 PM",
+      "is_open": true
+    },
+    {
+      "day_key": "thursday",
+      "day_he": "חמישי",
+      "day_en": "Thursday",
+      "hours_he": "8:00 - 17:00",
+      "hours_en": "8 AM–5 PM",
+      "is_open": true
+    },
+    {
+      "day_key": "friday",
+      "day_he": "שישי",
+      "day_en": "Friday",
+      "hours_he": "8:00 - 17:00",
+      "hours_en": "8 AM–5 PM",
+      "is_open": true
+    },
+    {
+      "day_key": "saturday",
+      "day_he": "שבת",
+      "day_en": "Saturday",
+      "hours_he": "9:00 - 17:00",
+      "hours_en": "9 AM–5 PM",
+      "is_open": true
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Amir Levy",
+      "rating": 5,
+      "text_he": "איגור מקצוען עם איכות עבודה, שירות וזמינות. מומלץ בחום וגם בקור 😊 …",
+      "text_en": "איגור מקצוען עם איכות עבודה, שירות וזמינות. מומלץ בחום וגם בקור 😊 …",
+      "date": "a week ago",
+      "is_local_guide": false
+    },
+    {
+      "author": "Daniel Izikovitz",
+      "rating": 5,
+      "text_he": "⭐️⭐️⭐️⭐️⭐️\nחייב לפרגן לזינו קור על שירות פשוט מצוין!\nהגיעו בזמן, עבדו בצורה נקייה ומקצועית, התקינו את המזגן בצורה מושלמת והסבירו כל שלב בסבלנות.\nהמחיר הוגן לגמרי, השירות מהיר ואדיב- רואים שמבינים עניין ועושים את העבודה מכל הלב.\nממליץ בחום לכל מי שמחפש מתקין מזגנים אמין ומקצועי בפתח תקווה ובאזור המרכז!!!",
+      "text_en": "⭐️⭐️⭐️⭐️⭐️\nחייב לפרגן לזינו קור על שירות פשוט מצוין!\nהגיעו בזמן, עבדו בצורה נקייה ומקצועית, התקינו את המזגן בצורה מושלמת והסבירו כל שלב בסבלנות.\nהמחיר הוגן לגמרי, השירות מהיר ואדיב- רואים שמבינים עניין ועושים את העבודה מכל הלב.\nממליץ בחום לכל מי שמחפש מתקין מזגנים אמין ומקצועי בפתח תקווה ובאזור המרכז!!!",
+      "date": "5 months ago",
+      "is_local_guide": false
+    },
+    {
+      "author": "ולרי",
+      "rating": 5,
+      "text_he": "התקנה מעולה,הצעה בונה,שירות מקסימום,ממליץ בחום !",
+      "text_en": "התקנה מעולה,הצעה בונה,שירות מקסימום,ממליץ בחום !",
+      "date": "8 months ago",
+      "is_local_guide": false
+    },
+    {
+      "author": "ארטיום לוקיאנוב",
+      "rating": 5,
+      "text_he": "אני מאוד מרוצה מהשירות של איגור אני שמח שיש בעלי מקצוע עם לב רחב איגור הגיע עשה בדיקה ראה שהבעיה היה בשלט תיקן את הבעיה ואפילו לא לקח כסף",
+      "text_en": "אני מאוד מרוצה מהשירות של איגור אני שמח שיש בעלי מקצוע עם לב רחב איגור הגיע עשה בדיקה ראה שהבעיה היה בשלט תיקן את הבעיה ואפילו לא לקח כסף",
+      "date": "8 months ago",
+      "is_local_guide": false
+    },
+    {
+      "author": "lior Taragano",
+      "rating": 5,
+      "text_he": "התעניינתי במזגן ונתן לי הצעת מחיר אטרקטיבית, הסבר מפורט ויחס אדיב ושירותי. מומלץ בחום",
+      "text_en": "התעניינתי במזגן ונתן לי הצעת מחיר אטרקטיבית, הסבר מפורט ויחס אדיב ושירותי. מומלץ בחום",
+      "date": "9 months ago",
+      "is_local_guide": false
+    }
+  ],
+  "photos": [
+    {
+      "url": "/images/photo-1.jpg",
+      "thumb": "/images/photo-1.jpg",
+      "source": "customer",
+      "alt_he": "זינו קור - תמונה 1",
+      "alt_en": "זינו קור - Photo 1"
+    },
+    {
+      "url": "/images/photo-2.jpg",
+      "thumb": "/images/photo-2.jpg",
+      "source": "customer",
+      "alt_he": "זינו קור - תמונה 2",
+      "alt_en": "זינו קור - Photo 2"
+    },
+    {
+      "url": "/images/photo-3.jpg",
+      "thumb": "/images/photo-3.jpg",
+      "source": "customer",
+      "alt_he": "זינו קור - תמונה 3",
+      "alt_en": "זינו קור - Photo 3"
+    },
+    {
+      "url": "/images/photo-4.jpg",
+      "thumb": "/images/photo-4.jpg",
+      "source": "customer",
+      "alt_he": "זינו קור - תמונה 4",
+      "alt_en": "זינו קור - Photo 4"
+    },
+    {
+      "url": "/images/photo-5.jpg",
+      "thumb": "/images/photo-5.jpg",
+      "source": "customer",
+      "alt_he": "זינו קור - תמונה 5",
+      "alt_en": "זינו קור - Photo 5"
+    },
+    {
+      "url": "/images/photo-6.jpg",
+      "thumb": "/images/photo-6.jpg",
+      "source": "customer",
+      "alt_he": "זינו קור - תמונה 6",
+      "alt_en": "זינו קור - Photo 6"
+    },
+    {
+      "url": "/images/photo-7.jpg",
+      "thumb": "/images/photo-7.jpg",
+      "source": "customer",
+      "alt_he": "זינו קור - תמונה 7",
+      "alt_en": "זינו קור - Photo 7"
+    },
+    {
+      "url": "/images/photo-8.jpg",
+      "thumb": "/images/photo-8.jpg",
+      "source": "customer",
+      "alt_he": "זינו קור - תמונה 8",
+      "alt_en": "זינו קור - Photo 8"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "icon": "🔧",
+      "title_he": "התקנת מזגנים מקצועית",
+      "title_en": "התקנת מזגנים מקצועית",
+      "desc_he": "התקנה מדוקדקת של יחידות מזגן בטכנולוגיה מתקדמת, עם התייחסות מקסימלית לפרטים וליעילות אנרגטית.",
+      "desc_en": "התקנה מדוקדקת של יחידות מזגן בטכנולוגיה מתקדמת, עם התייחסות מקסימלית לפרטים וליעילות אנרגטית."
+    },
+    {
+      "id": "2",
+      "icon": "🛠️",
+      "title_he": "טיפול ותחזוקה שוטפת",
+      "title_en": "טיפול ותחזוקה שוטפת",
+      "desc_he": "שירותי תחזוקה דוריים המבטיחים ביצועים אופטימליים, אורך חיים ממוקסימום ותפעול שקט ויעיל.",
+      "desc_en": "שירותי תחזוקה דוריים המבטיחים ביצועים אופטימליים, אורך חיים ממוקסימום ותפעול שקט ויעיל."
+    },
+    {
+      "id": "3",
+      "icon": "🌡️",
+      "title_he": "אבחון וקירור חכם",
+      "title_en": "אבחון וקירור חכם",
+      "desc_he": "בדיקות מקיפות וייעוץ מקצועי לבחירת מערכת מיזוג אוויר המתאימה למרחב שלכם.",
+      "desc_en": "בדיקות מקיפות וייעוץ מקצועי לבחירת מערכת מיזוג אוויר המתאימה למרחב שלכם."
+    },
+    {
+      "id": "4",
+      "icon": "⚡",
+      "title_he": "שירות חירום 24/7",
+      "title_en": "שירות חירום 24/7",
+      "desc_he": "זמינות מיידית לטיפול בתקלות דחופות, עם טכנאים מיומנים ומצויידים בכל עת.",
+      "desc_en": "זמינות מיידית לטיפול בתקלות דחופות, עם טכנאים מיומנים ומצויידים בכל עת."
+    },
+    {
+      "id": "5",
+      "icon": "✨",
+      "title_he": "ייעוץ אנרגטי וחסכון",
+      "title_en": "ייעוץ אנרגטי וחסכון",
+      "desc_he": "הדרכה מומחה לשימוש חכם במזגן, הפחתת צריכת חשמל ועלויות הנדסה מיטבית.",
+      "desc_en": "הדרכה מומחה לשימוש חכם במזגן, הפחתת צריכת חשמל ועלויות הנדסה מיטבית."
+    }
+  ],
+  "translations": {
+    "hero_badge": {
+      "he": "טכנאים מוסמכים ⭐ 4.8 כוכבים",
+      "en": "טכנאים מוסמכים ⭐ 4.8 כוכבים"
+    },
+    "hero_subtitle": {
+      "he": "פתיחת דלת לנוחות מושלמת – התקנה, טיפול וחדשנות בכל ביצוע",
+      "en": "פתיחת דלת לנוחות מושלמת – התקנה, טיפול וחדשנות בכל ביצוע"
+    },
+    "hero_available": {
+      "he": "זמינים כעת להתקנות וקריאות שירות דחופות",
+      "en": "זמינים כעת להתקנות וקריאות שירות דחופות"
+    },
+    "about_desc": {
+      "he": "זינו קור היא חברת התקנה ותחזוקה מיזוג אוויר ברמה אוליט, המשלבת מומחיות טכנית עם שירות אישי מעולה. בעלי אמונת הציבור בפתח תקווה ובסביבתה, אנו מציעים פתרונות קירור שהם לא רק יעילים אלא גם מתוחכמים ובעלי ערך ארוך טווח.",
+      "en": "זינו קור היא חברת התקנה ותחזוקה מיזוג אוויר ברמה אוליט, המשלבת מומחיות טכנית עם שירות אישי מעולה. בעלי אמונת הציבור בפתח תקווה ובסביבתה, אנו מציעים פתרונות קירור שהם לא רק יעילים אלא גם מתוחכמים ובעלי ערך ארוך טווח."
+    },
+    "about_years_value": {
+      "he": "48",
+      "en": "48"
+    },
+    "services_subtitle": {
+      "he": "שירותים משלימים המעניקים יתרון תחרותי",
+      "en": "שירותים משלימים המעניקים יתרון תחרותי"
+    },
+    "services_cta": {
+      "he": "בחרו בשירותנו המיוחדים",
+      "en": "בחרו בשירותנו המיוחדים"
+    },
+    "gallery_subtitle": {
+      "he": "גלריית עבודות מובחרות",
+      "en": "גלריית עבודות מובחרות"
+    },
+    "contact_subtitle": {
+      "he": "צרו קשר עם צוות המומחים שלנו",
+      "en": "צרו קשר עם צוות המומחים שלנו"
+    },
+    "contact_wa_hello": {
+      "he": "שלום, אני מעוניין בשירותי התקנה ותחזוקת מזגנים",
+      "en": "שלום, אני מעוניין בשירותי התקנה ותחזוקת מזגנים"
+    }
+  },
+  "design": {
+    "hero_layout": "minimal",
+    "card_style": "glass",
+    "button_style": "rounded",
+    "hero_pattern": "mesh",
+    "gallery_style": "slider",
+    "section_style": "standard",
+    "animation_style": "dramatic"
+  }
+}

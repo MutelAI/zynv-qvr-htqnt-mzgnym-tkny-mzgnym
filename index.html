@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO meta tags are dynamically set by the app from business.json -->
+    <title>זינו קור - התקנת מזגנים וטיפול טכנאי מיזוג אוויר בפתח תקווה</title>
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Preload business data (starts in parallel with JS bundle) -->
+    <script>
+      // Start fetching JSON immediately — before Angular even loads (cache-bust to get latest after edits)
+      window.__bizData = fetch('/data/business.json?t=' + Date.now()).then(r => r.json());
+      // Check for edit-mode token in query params (zero-cost for regular users)
+      window.__editToken = new URLSearchParams(location.search).get('edit');
+    </script>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts (non-render-blocking) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Inter:wght@300;400;500;700;900&display=swap" as="style" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet" /></noscript>
+
+    <link rel="stylesheet" href="/src/styles.css" />
+      <meta name="description" content="שירותי התקנה, תחזוקה וטיפול חירום במזגנים ברמה גבוהה. טכנאים מוסמכים, שירות 24/7, עם דירוג 4.8 כוכבים מ-48 ביקורות." />
+      <meta name="keywords" content="מזגן, התקנת מזגנים, טכנאי מזגנים, תחזוקת מיזוג אוויר, פתח תקווה, טיפול חירום, מזגן ביתי, קירור אוויר, חסכון אנרגיה" />
+  </head>
+  <body>
+    <app-root></app-root>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

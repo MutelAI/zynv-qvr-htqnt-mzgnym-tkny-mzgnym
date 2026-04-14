@@ -1,0 +1,10 @@
+{
+  "brand_personality": "מינימליזם מתוחכם עם מגע של עדינות – שירות מקצועי המשלב זגגיות וחום אנושי, אמין וברור.",
+  "primary_color": "#78350F",
+  "secondary_color": "#92400E",
+  "hero_gradient": "from-sky-400 via-amber-100 to-orange-200",
+  "contact_gradient": "from-orange-200 via-sky-300 to-sky-500",
+  "font_heading": "Playfair Display",
+  "font_body": "Inter",
+  "font_google_import": "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');"
+}
