@@ -551,11 +551,13 @@ function createToolbar(): void {
     <span class="edit-toolbar-label">✏️ Edit Mode</span>
     <button id="edit-btn-versions">📋 Versions</button>
     <button id="edit-btn-save">💾 Save</button>
+    <button id="edit-btn-deploy">🚀 Deploy</button>
     <button id="edit-btn-cancel">✖ Exit</button>
   `;
   document.body.appendChild(toolbar);
   toolbar.querySelector('#edit-btn-versions')!.addEventListener('click', toggleVersionPanel);
   toolbar.querySelector('#edit-btn-save')!.addEventListener('click', save);
+  toolbar.querySelector('#edit-btn-deploy')!.addEventListener('click', triggerDeploy);
   toolbar.querySelector('#edit-btn-cancel')!.addEventListener('click', cancel);
 }
 
@@ -665,23 +667,28 @@ async function applyVersion(folder: string): Promise<void> {
   const json = JSON.stringify(data, null, 2);
   const info = versionsList.find(v => v.folder === folder);
 
-  // Save via API and reload for a clean full re-render
+  // Save via API, commit to GitHub, trigger redeploy, then reload
+  const applyBtn = versionPanel?.querySelector<HTMLButtonElement>(`.version-btn-apply[data-folder="${folder}"]`);
+  if (applyBtn) { applyBtn.disabled = true; applyBtn.textContent = '⏳ שומר…'; }
+
   try {
     const res = await fetch('/api/save-business', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: json,
     });
-    if (!res.ok) throw new Error('API returned ' + res.status);
-    showToast(`✅ ${info?.label ?? folder} applied — reloading...`);
-    setTimeout(() => location.reload(), 600);
-  } catch {
-    // Fallback: set data locally and let user save manually
-    mutatedData = structuredClone(data);
-    markDirty();
-    previewingVersion = null;
-    closeVersionPanel();
-    showToast(`✅ ${info?.label ?? folder} loaded — click Save to persist`);
+    if (res.ok) {
+      const resData = await res.json();
+      const hash = resData.hash ?? resData.git?.hash ?? '';
+      showToast(`✅ ${info?.label ?? folder} הוחל — האתר יתעדכן תוך ~1 דקה${hash ? ` (${hash})` : ''}`);
+      setTimeout(() => location.reload(), 800);
+    } else {
+      const errBody = await res.json().catch(() => ({}));
+      throw new Error(errBody.error || `Server error ${res.status}`);
+    }
+  } catch (err: any) {
+    if (applyBtn) { applyBtn.disabled = false; applyBtn.textContent = '✅ Apply'; }
+    showToast(`❌ שגיאה: ${err.message}`);
   }
 }
 
@@ -702,36 +709,38 @@ function markDirtyWithLabel(text: string): void {
   if (saveBtn) saveBtn.style.background = '#22c55e';
 }
 
-// ── Save (download JSON) ─────────────────────────────────────────────────────
+// ── Save (PUT to /api/save-business, fallback to download) ──────────────────
 
 function save(): void {
   const json = JSON.stringify(mutatedData, null, 2);
 
-  // Try to auto-save via dev server API first
+  const saveBtn = toolbar?.querySelector('#edit-btn-save') as HTMLButtonElement | null;
+  if (saveBtn) { saveBtn.disabled = true; saveBtn.textContent = '⏳ Saving…'; }
+
   fetch('/api/save-business', {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: json,
   })
-    .then(res => {
+    .then(async res => {
       if (res.ok) return res.json();
-      throw new Error('API returned ' + res.status);
+      const errBody = await res.json().catch(() => ({}));
+      throw new Error(errBody.error || `Server error ${res.status}`);
     })
     .then((data: any) => {
       isDirty = false;
-      if (data.git?.committed) {
-        showToast(`✅ Saved & committed (${data.git.hash})`);
-      } else {
-        showToast('✅ Saved successfully!');
-      }
       resetToolbar();
+      if (data.git?.committed || data.committed) {
+        showToast(`✅ נשמר! האתר יתעדכן תוך ~1 דקה (${data.hash ?? data.git?.hash ?? ''})`);
+      } else {
+        showToast('✅ נשמר בהצלחה!');
+      }
     })
-    .catch(() => {
-      // Fallback: download as file
+    .catch((err: Error) => {
+      resetToolbar();
+      showToast(`❌ שגיאה בשמירה: ${err.message} — מוריד JSON כגיבוי`);
       downloadJson(json);
       isDirty = false;
-      showToast('📥 business.json downloaded — replace it in the site folder');
-      resetToolbar();
     });
 }
 
@@ -748,8 +757,33 @@ function downloadJson(json: string): void {
 function resetToolbar(): void {
   const label = toolbar?.querySelector('.edit-toolbar-label');
   if (label) label.textContent = '✏️ Edit Mode';
-  const saveBtn = toolbar?.querySelector('#edit-btn-save') as HTMLElement | null;
-  if (saveBtn) saveBtn.style.background = '';
+  const saveBtn = toolbar?.querySelector('#edit-btn-save') as HTMLButtonElement | null;
+  if (saveBtn) { saveBtn.style.background = ''; saveBtn.disabled = false; saveBtn.textContent = '💾 Save'; }
+}
+
+// ── Deploy (trigger redeploy without saving changes) ─────────────────────────
+
+async function triggerDeploy(): Promise<void> {
+  const deployBtn = toolbar?.querySelector<HTMLButtonElement>('#edit-btn-deploy');
+  if (deployBtn) { deployBtn.disabled = true; deployBtn.textContent = '⏳ Deploying…'; }
+
+  try {
+    const res = await fetch('/api/deploy', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ editToken: originalData.editToken }),
+    });
+    if (res.ok) {
+      showToast('🚀 Deploy הופעל — האתר יתעדכן תוך ~1 דקה');
+    } else {
+      const err = await res.json().catch(() => ({}));
+      showToast(`❌ Deploy נכשל: ${err.error || `Server error ${res.status}`}`);
+    }
+  } catch (err: any) {
+    showToast(`❌ Deploy נכשל: ${err.message}`);
+  } finally {
+    if (deployBtn) { deployBtn.disabled = false; deployBtn.textContent = '🚀 Deploy'; }
+  }
 }
 
 // ── Cancel ───────────────────────────────────────────────────────────────────
